@@ -12,10 +12,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        dotnet-version: 9.0.x
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -23,7 +19,7 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: ${{ matrix.dotnet-version }}
+          dotnet-version: 9.0.x
 
       - name: Restore dependencies
         run: dotnet restore src/Sharpflake.csproj
