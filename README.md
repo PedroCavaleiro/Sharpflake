@@ -1,4 +1,7 @@
 # Sharpflake
+[![Build](https://github.com/PedroCavaleiro/Sharpflake/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/PedroCavaleiro/Sharpflake/actions/workflows/build.yml)
+[![Release](https://github.com/PedroCavaleiro/Sharpflake/actions/workflows/release.yml/badge.svg?branch=main)](https://github.com/PedroCavaleiro/Sharpflake/actions/workflows/release.yml)
+
 A Simple C# Snowflake ID library
 
 This will allow you to generate unique IDs for your application but also parse the details back.
@@ -12,7 +15,7 @@ dotnet add package Sharpflake
 ```
 ## Usage with Dependency Injection
 
-To use the library together with ASP.net on your Program.cs, while configuring the services you can add the following:
+To use the library together with ASP.net on your Program.cs, while configuring the services, you can add the following:
 
 ```csharp
 builder.Services.AddSnowflakeIdGenerator();
@@ -61,7 +64,7 @@ var generatorA = new SnowflakeGenerator(configA);
 var generator2 = new SnowflakeGenerator(configB);
 ```
 
-When using a dependency injection this can be done by adding the configuration to the `AddSnowflakeIdGenerator` method.
+When using a dependency injection, this can be done by adding the configuration to the `AddSnowflakeIdGenerator` method.
 
 ```csharp
 // Using the DateTime class
@@ -113,7 +116,7 @@ var generator = new SnowflakeGenerator(config);
 ```
 
 It's also possible to type cast a `string` or `long` to a `Snowflake` object,
-this will automatically parse the snowflake but it doesn't take a custom configuration.
+this will automatically parse the snowflake, but it doesn't take a custom configuration.
 ```csharp
 var snowflake = (Snowflake)'62937765418893312';
 ```
