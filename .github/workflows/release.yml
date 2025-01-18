@@ -28,8 +28,8 @@ jobs:
 
       - name: Publish to NuGet
         if: github.event.action == 'created'
-        run: dotnet nuget push ./packages/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
+        run: dotnet nuget push ./packages/*.nupkg --skip-duplicate --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
 
       - name: Publish to GitHub Packages
         if: github.event.action == 'created'
-        run: dotnet nuget push ./packages/*.nupkg --api-key ${{ secrets.GH_PAT }} --source https://nuget.pkg.github.com/PedroCavaleiro/index.json
+        run: dotnet nuget push ./packages/*.nupkg --skip-duplicate --api-key ${{ secrets.GH_PAT }} --source https://nuget.pkg.github.com/PedroCavaleiro/index.json
