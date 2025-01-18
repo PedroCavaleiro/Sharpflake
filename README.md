@@ -1,6 +1,6 @@
 # Sharpflake
 [![Build](https://github.com/PedroCavaleiro/Sharpflake/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/PedroCavaleiro/Sharpflake/actions/workflows/build.yml)
-[![Release](https://github.com/PedroCavaleiro/Sharpflake/actions/workflows/release.yml/badge.svg?branch=main)](https://github.com/PedroCavaleiro/Sharpflake/actions/workflows/release.yml)
+[![Release](https://github.com/PedroCavaleiro/Sharpflake/actions/workflows/release.yml/badge.svg)](https://github.com/PedroCavaleiro/Sharpflake/actions/workflows/release.yml)
 
 A Simple C# Snowflake ID library
 
