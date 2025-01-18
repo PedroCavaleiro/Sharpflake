@@ -32,4 +32,4 @@ jobs:
 
       - name: Publish to GitHub Packages
         if: github.event.action == 'created'
-        run: dotnet nuget push ./packages/*.nupkg --api-key ${{ secrets.GITHUB_TOKEN }} --source https://nuget.pkg.github.com/PedroCavaleiro/index.json
+        run: dotnet nuget push ./packages/*.nupkg --api-key ${{ secrets.GH_PAT }} --source https://nuget.pkg.github.com/PedroCavaleiro/index.json
